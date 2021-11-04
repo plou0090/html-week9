@@ -102,13 +102,19 @@ footer{
     font-size:0.7em;
 }
 
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /***********************************************************
 				    Hamburger Menu
 ***********************************************************/
 
 
 nav{
-    height:60px;
+    /* height:60px; */
     position:relative;
 }
 
@@ -193,6 +199,23 @@ nav ul{
     .hamburger{
         display: none;
     }
-    
+
+    nav ul{
+        display: block;
+    }
+   
+    #menuchecker:checked + ul{
+        /* incase the menu is checked, and someone makes the screen larger, this will override the position of the menu */
+        position: static;
+    }
+
+    nav ul li{
+        float:left;
+        margin:20px 10px 0; /* three values: top / left-right / bottom */
+    }
+
+    nav ul li a{
+        text-decoration:none;
+    }
 }
 
