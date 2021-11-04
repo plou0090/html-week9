@@ -170,4 +170,29 @@ nav ul{
         max-width: 1024px;
         margin: 0 auto; /* this will center the container div once the browser window is wider than the max width */
     }
+
+    main{
+        /* width: calc(70% - 40px); */
+        width: 70%;
+        box-sizing: border-box; /* this tells the browser to ignore the padding */
+        /* border-box is effificient because it means we dont have to change any calculations is we change the padding on an element */
+        float: left;
+    }
+    
+    aside{
+        width: calc(30% - 40px);
+        float: right;
+    }
+
+    footer{
+        clear: both;
+        /* makes the footer see the floated elements and go below */
+    }
+
+    /* hide the hamburger menu and turn it into a normal nav menu */
+    .hamburger{
+        display: none;
+    }
+    
 }
+
